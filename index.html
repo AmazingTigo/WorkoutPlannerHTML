@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workout Planner</title>
+  <!-- Adding modern fonts from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Today's Workout</h1>
+    <div class="button-group">
+      <button class="preset-button" onclick="selectPreset('Push Pull Legs')">Push Pull Legs</button>
+      <button class="preset-button" onclick="selectPreset('Intense Strength')">Intense Strength</button>
+      <button class="preset-button" onclick="selectPreset('Aesthetic Building')">Aesthetic Building</button>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 id="today" class="card-title"></h2>
+      </div>
+      <div class="card-content">
+        <div class="workout-info">
+          <div>
+            <h3 id="workout-name" class="workout-name"></h3>
+            <p id="workout-description" class="workout-description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
