@@ -131,7 +131,7 @@ body {
   }
   
   input:checked + .slider {
-    background-color: #66bb6a;
+    background-color: #000000;
   }
   
   input:checked + .slider:before {
@@ -147,7 +147,7 @@ body {
   }
   
   .slider .fa-sun {
-    color: #f39c12;
+    color: #000000;
     position: absolute;
     left: 8px;
     top: 8px;
@@ -156,7 +156,7 @@ body {
   }
   
   .slider .fa-moon {
-    color: #f1c40f;
+    color: #000000;
     position: absolute;
     right: 8px;
     top: 8px;
@@ -176,7 +176,7 @@ body {
     --background-color: #ffffff;
     --text-color: #333333;
     --card-background: #f0f0f0;
-    --card-header-background: #f0f4f8; /* Add this line */
+    --card-header-background: #ccd2d9; 
     --button-background: #4fb4c4;
     --button-text: #ffffff;
 }
@@ -190,9 +190,9 @@ body {
     --button-text: #ffffff;
 }
 
-/* Update the card header style to use the variable */
+
 .card-header {
-    background-color: var(--card-header-background); /* Change this line */
+    background-color: var(--card-header-background); 
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid #ddd;
