@@ -3,33 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workout Planner</title>
-  <!-- Adding modern fonts from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+  <title>~FitPlan~</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
-    <h1 class="title">Today's Workout</h1>
-    <div class="button-group">
-      <button class="preset-button" onclick="selectPreset('Push Pull Legs')">Push Pull Legs</button>
-      <button class="preset-button" onclick="selectPreset('Intense Strength')">Intense Strength</button>
-      <button class="preset-button" onclick="selectPreset('Aesthetic Building')">Aesthetic Building</button>
-    </div>
+    <header>
+      <h1 class="title"> FitPlan</h1>
+    </header>
 
-    <div class="card">
-      <div class="card-header">
-        <h2 id="today" class="card-title"></h2>
-      </div>
-      <div class="card-content">
-        <div class="workout-info">
-          <div>
-            <h3 id="workout-name" class="workout-name"></h3>
-            <p id="workout-description" class="workout-description"></p>
+    <main>
+      <section class="workout-selector">
+        <h2>Choose Your Workout</h2>
+        <div class="button-group">
+          <button class="preset-button" onclick="selectPreset('Push Pull Legs')">
+            <i class="fas fa-running"></i> Push Pull Legs
+          </button>
+          <button class="preset-button" onclick="selectPreset('Intense Strength')">
+            <i class="fas fa-dumbbell"></i> Intense Strength
+          </button>
+          <button class="preset-button" onclick="selectPreset('Aesthetic Building')">
+            <i class="fas fa-user-ninja"></i> Aesthetic Building
+          </button>
+        </div>
+      </section>
+
+      <section class="workout-display">
+        <div class="card">
+          <div class="card-header">
+            <h2 id="today" class="card-title"></h2>
+          </div>
+          <div class="card-content">
+            <div class="workout-info">
+              <h3 id="workout-name" class="workout-name"></h3>
+              <p id="workout-description" class="workout-description"></p>
+            </div>
           </div>
         </div>
+      </section>
+      <br>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </div>
+        </label>
       </div>
-    </div>
+    </main>
   </div>
 
   <script src="scripts.js"></script>

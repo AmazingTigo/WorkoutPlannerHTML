@@ -34,6 +34,40 @@ const workoutPresets = {
     selectedPreset = preset;
     updateWorkout();
   }
+
+
+const themeToggle = document.querySelector('#checkbox');
+
+
+function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.setAttribute('data-theme', themeName);
+}
+
+// theme
+function toggleTheme() {
+   if (localStorage.getItem('theme') === 'dark'){
+       setTheme('light');
+   } else {
+       setTheme('dark');
+   }
+}
+
+
+(function () {
+   if (localStorage.getItem('theme') === 'dark') {
+       setTheme('dark');
+       themeToggle.checked = true;
+   } else {
+       setTheme('light');
+       themeToggle.checked = false;
+   }
+})();
+
+// theme
+themeToggle.addEventListener('change', function() {
+    toggleTheme();
+});
   
   function updateWorkout() {
     const today = new Date().toLocaleString('en-us', { weekday: 'long' });
@@ -44,6 +78,6 @@ const workoutPresets = {
     document.getElementById("workout-description").textContent = todaysWorkout.description;
   }
   
-  // Initial load
+
   updateWorkout();
   
