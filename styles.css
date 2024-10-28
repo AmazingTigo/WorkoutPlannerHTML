@@ -43,8 +43,7 @@ body {
 html, body {
   margin: 0;
   padding: 0;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Prevent scrolling */
+  height: 100vh; 
 }
 
 .container {
@@ -65,14 +64,14 @@ main {
 header {
   text-align: center;
   padding: 20px 0;
-  margin-bottom: 20px; /* Adjust this value to control space below the title */
+  margin-bottom: 5px; 
 }
 
 .title {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.5em;
   margin: 0;
-  padding: 20px 0; /* Adjust this value to control vertical spacing */
+  padding: 20px 0; 
   color: var(--text-color);
 }
 
