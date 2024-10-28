@@ -3,59 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>~FitPlan~</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="FitPlan">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/pump.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/pump.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/assets/pump.png">
+  <link rel="icon" type="image/x-icon" href="assets/pump.ico">
+  <title>FitPlan</title>
+  
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1 class="title"> FitPlan</h1>
-    </header>
+    <div class="content-wrapper">
+      <div class="container">
+    <!--made by tigo-->
+        <main>
+          <section class="workout-selector">
+            <header>
+              <h1 class="title">FitPlan</h1>
+            </header>
+            <h2>Choose Your Workout</h2>
+            <div class="button-group">
+              <button class="preset-button add-custom" onclick="openModal()">
+                <i class="fas fa-plus"></i> Custom Workout
+              </button>
+            </div>
+          </section>
 
-    <main>
-      <section class="workout-selector">
-        <h2>Choose Your Workout</h2>
-        <div class="button-group">
-          <button class="preset-button" onclick="selectPreset('Push Pull Legs')">
-            <i class="fas fa-running"></i> Push Pull Legs
-          </button>
-          <button class="preset-button" onclick="selectPreset('Intense Strength')">
-            <i class="fas fa-dumbbell"></i> Intense Strength
-          </button>
-          <button class="preset-button" onclick="selectPreset('Aesthetic Building')">
-            <i class="fas fa-user-ninja"></i> Aesthetic Building
-          </button>
-        </div>
-      </section>
-
-      <section class="workout-display">
-        <div class="card">
-          <div class="card-header">
-            <h2 id="today" class="card-title"></h2>
-          </div>
-          <div class="card-content">
-            <div class="workout-info">
-              <h3 id="workout-name" class="workout-name"></h3>
-              <p id="workout-description" class="workout-description"></p>
+    <!--made by tigo-->
+          <section class="workout-display">
+            <div class="card">
+              <div class="card-header">
+                <h2 id="today" class="card-title"></h2>
+              </div>
+              <div class="card-content">
+                <div class="workout-info">
+                  <h3 id="workout-name" class="workout-name"></h3>
+                  <p id="workout-description" class="workout-description"></p>
+                  <button onclick="modifyExercise()" class="modify-button">
+                    <i class="fas fa-edit"></i> Modify
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+      <!--made by tigo-->
+          <div id="exercise-modal" class="modal">
+            <div class="modal-content">
+              <span class="close-button" onclick="closeModal()">&times;</span>
+              <h2>Custom Workout Plan</h2>
+              <div class="day-inputs">
+                <div class="day-input">
+                  <label for="monday">Monday:</label>
+                  <textarea id="monday" rows="3"></textarea>
+                </div>
+                <div class="day-input">
+                  <label for="tuesday">Tuesday:</label>
+                  <textarea id="tuesday" rows="3"></textarea>
+                </div>
+                <div class="day-input">
+                  <label for="wednesday">Wednesday:</label>
+                  <textarea id="wednesday" rows="3"></textarea>
+                </div>
+                <div class="day-input">
+                  <label for="thursday">Thursday:</label>
+                  <textarea id="thursday" rows="3"></textarea>
+                </div>
+                <div class="day-input">
+                  <label for="friday">Friday:</label>
+                  <textarea id="friday" rows="3"></textarea>
+                </div>
+                <div class="day-input">
+                  <label for="saturday">Saturday:</label>
+                  <textarea id="saturday" rows="3"></textarea>
+                </div>
+                <div class="day-input">
+                  <label for="sunday">Sunday:</label>
+                  <textarea id="sunday" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="modal-buttons">
+                <button onclick="saveExercises()" class="save-button">Save</button>
+                <button onclick="closeModal()" class="cancel-button">Cancel</button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <br>
-      <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-          <input type="checkbox" id="checkbox" />
-          <div class="slider round">
-            <i class="fas fa-sun"></i>
-            <i class="fas fa-moon"></i>
+
+      <!--mouhahahahahha-->
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+              </div>
+            </label>
           </div>
-        </label>
+          <div>
+            <footer id="GitHub">Open source project available on <a href="https://github.com/AmazingTigo/WorkoutPlannerHTML">GitHub</a></footer>
+          </div>
+        </main>
       </div>
-    </main>
+    </div>
   </div>
 
   <script src="scripts.js"></script>

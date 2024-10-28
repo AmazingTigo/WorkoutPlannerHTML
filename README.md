@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">✨ Open the .html file<br>🎯 Choose goal <br>🎲 Action!</p>
+<p align="left">✨ Open the .html file<br>🎯 Creat goal <br>🎲 Action!</p>
 
 ###
 
